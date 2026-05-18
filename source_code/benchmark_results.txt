@@ -1,0 +1,63 @@
+-------------------------------------------------------------------------------------------------------------------------
+Trạng thái                                    Độ sâu   Thuật toán    Nước đi      Giá trị   Trạng thái xét  Thời gian (s)
+-------------------------------------------------------------------------------------------------------------------------
+State 1: Đầu ván (bàn gần trống)                   1      Minimax     (3, 4)          210               29         0.0000
+State 1: Đầu ván (bàn gần trống)                   1   Alpha-Beta     (3, 4)          210               29         0.0000
+  → Cùng nước đi: ✓ | Alpha-Beta giảm 0.0% trạng thái | Tăng tốc: 0.0x
+State 1: Đầu ván (bàn gần trống)                   2      Minimax     (3, 4)         -100            1,054         0.0313
+State 1: Đầu ván (bàn gần trống)                   2   Alpha-Beta     (3, 4)         -100               88         0.0462
+  → Cùng nước đi: ✓ | Alpha-Beta giảm 91.7% trạng thái | Tăng tốc: 0.7x
+State 1: Đầu ván (bàn gần trống)                   3      Minimax     (3, 4)        3,005           44,562         1.2063
+State 1: Đầu ván (bàn gần trống)                   3   Alpha-Beta     (3, 4)        3,005            1,646         0.2065
+  → Cùng nước đi: ✓ | Alpha-Beta giảm 96.3% trạng thái | Tăng tốc: 5.8x
+-------------------------------------------------------------------------------------------------------------------------
+State 2: Giữa ván                                  1      Minimax       None    1,000,000                1         0.0000
+State 2: Giữa ván                                  1   Alpha-Beta       None    1,000,000                1         0.0000
+  → Cùng nước đi: ✓ | Alpha-Beta giảm 0.0% trạng thái | Tăng tốc: 0.0x
+State 2: Giữa ván                                  2      Minimax       None    1,000,000                1         0.0000
+State 2: Giữa ván                                  2   Alpha-Beta       None    1,000,000                1         0.0000
+  → Cùng nước đi: ✓ | Alpha-Beta giảm 0.0% trạng thái | Tăng tốc: 0.0x
+State 2: Giữa ván                                  3      Minimax       None    1,000,000                1         0.0000
+State 2: Giữa ván                                  3   Alpha-Beta       None    1,000,000                1         0.0000
+  → Cùng nước đi: ✓ | Alpha-Beta giảm 0.0% trạng thái | Tăng tốc: 0.0x
+-------------------------------------------------------------------------------------------------------------------------
+State 3: Máy có thể thắng ngay                     1      Minimax     (4, 3)    1,000,000               48         0.0020
+State 3: Máy có thể thắng ngay                     1   Alpha-Beta     (4, 3)    1,000,000               48         0.0040
+  → Cùng nước đi: ✓ | Alpha-Beta giảm 0.0% trạng thái | Tăng tốc: 0.5x
+State 3: Máy có thể thắng ngay                     2      Minimax     (4, 3)    1,000,000            2,293         0.0862
+State 3: Máy có thể thắng ngay                     2   Alpha-Beta     (4, 3)    1,000,000               93         0.1290
+  → Cùng nước đi: ✓ | Alpha-Beta giảm 95.9% trạng thái | Tăng tốc: 0.7x
+State 3: Máy có thể thắng ngay                     3      Minimax     (4, 0)    1,000,000          119,710         5.0308
+State 3: Máy có thể thắng ngay                     3   Alpha-Beta     (4, 3)    1,000,000            2,358         0.3652
+  → Cùng nước đi: ✗ | Alpha-Beta giảm 98.0% trạng thái | Tăng tốc: 13.8x
+-------------------------------------------------------------------------------------------------------------------------
+State 4: Người chơi sắp thắng, cần chặn            1      Minimax     (0, 3)    1,000,000               37         0.0000
+State 4: Người chơi sắp thắng, cần chặn            1   Alpha-Beta     (0, 3)    1,000,000               37         0.0043
+  → Cùng nước đi: ✓ | Alpha-Beta giảm 0.0% trạng thái | Tăng tốc: 0.0x
+State 4: Người chơi sắp thắng, cần chặn            2      Minimax     (0, 3)    1,000,000            1,456         0.0433
+State 4: Người chơi sắp thắng, cần chặn            2   Alpha-Beta     (0, 3)    1,000,000               72         0.0804
+  → Cùng nước đi: ✓ | Alpha-Beta giảm 95.1% trạng thái | Tăng tốc: 0.5x
+State 4: Người chơi sắp thắng, cần chặn            3      Minimax     (0, 3)    1,000,000           61,391         2.5383
+State 4: Người chơi sắp thắng, cần chặn            3   Alpha-Beta     (0, 3)    1,000,000               72         0.0805
+  → Cùng nước đi: ✓ | Alpha-Beta giảm 99.9% trạng thái | Tăng tốc: 31.5x
+-------------------------------------------------------------------------------------------------------------------------
+State 5: Hai bên đều có cơ hội                     1      Minimax       None   -1,000,000                1         0.0000
+State 5: Hai bên đều có cơ hội                     1   Alpha-Beta       None   -1,000,000                1         0.0000
+  → Cùng nước đi: ✓ | Alpha-Beta giảm 0.0% trạng thái | Tăng tốc: 0.0x
+State 5: Hai bên đều có cơ hội                     2      Minimax       None   -1,000,000                1         0.0000
+State 5: Hai bên đều có cơ hội                     2   Alpha-Beta       None   -1,000,000                1         0.0000
+  → Cùng nước đi: ✓ | Alpha-Beta giảm 0.0% trạng thái | Tăng tốc: 0.0x
+State 5: Hai bên đều có cơ hội                     3      Minimax       None   -1,000,000                1         0.0000
+State 5: Hai bên đều có cơ hội                     3   Alpha-Beta       None   -1,000,000                1         0.0000
+  → Cùng nước đi: ✓ | Alpha-Beta giảm 0.0% trạng thái | Tăng tốc: 0.0x
+-------------------------------------------------------------------------------------------------------------------------
+State 6: Nhiều nước đi hợp lệ                      1      Minimax     (6, 5)       15,145               68         0.0000
+State 6: Nhiều nước đi hợp lệ                      1   Alpha-Beta     (6, 5)       15,145               68         0.0000
+  → Cùng nước đi: ✓ | Alpha-Beta giảm 0.0% trạng thái | Tăng tốc: 0.0x
+State 6: Nhiều nước đi hợp lệ                      2      Minimax     (5, 3)       -5,725            4,518         0.2712
+State 6: Nhiều nước đi hợp lệ                      2   Alpha-Beta     (5, 3)       -5,725              265         0.3897
+  → Cùng nước đi: ✓ | Alpha-Beta giảm 94.1% trạng thái | Tăng tốc: 0.7x
+State 6: Nhiều nước đi hợp lệ                      3      Minimax     (6, 5)    1,000,000          297,128        19.0253
+State 6: Nhiều nước đi hợp lệ                      3   Alpha-Beta     (6, 5)    1,000,000            4,648         1.5063
+  → Cùng nước đi: ✓ | Alpha-Beta giảm 98.4% trạng thái | Tăng tốc: 12.6x
+-------------------------------------------------------------------------------------------------------------------------
