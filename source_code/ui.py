@@ -230,9 +230,16 @@ class GameUI:
         t = self.font_m.render(msg, True, col)
         self.screen.blit(t, (px + PANEL_W // 2 - t.get_width() // 2, 105))
 
+        if self.game_over:
+            hint = self.font_s.render("Nhấn Ván Mới để chơi lại", True, C_PANEL_TXT)
+            self.screen.blit(hint, (px + PANEL_W // 2 - hint.get_width() // 2, 138))
+            move_y = 168
+        else:
+            move_y = 140
+
         # Số nước đã đánh
         t = self.font_s.render(f"Số nước: {self.board.move_count}", True, C_PANEL_TXT)
-        self.screen.blit(t, (x, 140))
+        self.screen.blit(t, (x, move_y))
 
         # Thông tin AI
         algo = "Alpha-Beta" if self.use_alphabeta else "Minimax"
@@ -396,11 +403,37 @@ class GameUI:
             if r is not None and self.board.is_valid(r, c):
                 self._player_move(r, c)
 
+    def _draw_board_message(self):
+        if not self.game_over:
+            return
+
+        if self.winner == AI:
+            msg = "Máy thắng! 🤖"
+            color = C_RED
+        elif self.winner == PLAYER:
+            msg = "Bạn thắng! 🎉"
+            color = C_GREEN
+        else:
+            msg = "Hòa! 🤝"
+            color = C_YELLOW
+
+        board_center = (MARGIN + BOARD_PIXEL // 2, MARGIN + BOARD_PIXEL // 2)
+        overlay = pygame.Surface((BOARD_PIXEL - 32, 100), pygame.SRCALPHA)
+        overlay.fill((20, 20, 20, 180))
+        overlay_rect = overlay.get_rect(center=board_center)
+        self.screen.blit(overlay, overlay_rect)
+
+        title = self.font_xl.render(msg, True, color)
+        hint = self.font_s.render("Nhấn Ván Mới để tiếp tục", True, C_PANEL_TXT)
+        self.screen.blit(title, title.get_rect(center=(board_center[0], board_center[1] - 16)))
+        self.screen.blit(hint, hint.get_rect(center=(board_center[0], board_center[1] + 28)))
+
     def _render(self):
         self.screen.fill((30, 30, 35))
         self._draw_board()
         self._draw_pieces()
         self._draw_hover()
+        self._draw_board_message()
         self._draw_panel()
         pygame.display.flip()
 
